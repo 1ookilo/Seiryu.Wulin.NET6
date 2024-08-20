@@ -17,6 +17,8 @@ namespace Seiryu.WulinMod;
 class Patches
 {
 
+    private static System.Random random = new System.Random();
+    
     private static void SetVideo(VideoPlayer vd)
     {
         if (VideoManager.Videos.Count == 0)
@@ -34,7 +36,6 @@ class Patches
         vd.Play();
     }
 
-    private static System.Random random = new System.Random();
 
     [HarmonyPatch(typeof(UIVideoPlayer), "ShowAsync")]
     [HarmonyPostfix]
