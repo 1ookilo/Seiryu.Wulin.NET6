@@ -58,11 +58,6 @@ class Patches
             if (BepInExLoader.translationDict[key] == "")
                 return;
 
-            if (BepInExLoader.translationDict[key].Contains("\\n"))
-            {
-                BepInExLoader.translationDict[key] = BepInExLoader.translationDict[key].Replace("\\n", "\n");
-            }
-
             if (BepInExLoader.translationDict[key].Contains("|"))
             {
                 string[] sentences = BepInExLoader.translationDict[key].Split('|');
